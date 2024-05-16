@@ -1,0 +1,28 @@
+@media  screen and (max-width: 1200px) {
+    #nav-menu {
+        display: none;
+    }
+    #burger-nav {
+        display: flex;
+    }
+
+    .section-text {
+        max-width: 100%;
+        padding: 5px;
+    }
+
+    #profile, .container-contacts {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .custom-label-contacts {
+        padding: 5px 12px; /* Slightly reduce padding for smaller screens */
+    }
+
+    .profile-pic-style {
+        width: 100%; /* Make the image responsive */
+        max-width: 250px; /* Limit the maximum size */
+        margin: auto;
+    }
+}

@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Syne:wght@400..800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Yeseva+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Josefin Sans", sans-serif;
+    display: flex;
+    background: #ffecdd;
+    flex-direction: column; 
+}
+
+div.syne-logo {
+  font-family: "Yeseva One", serif;
+  font-style: normal;
+  font-size: 2rem;
+  color: #ff0800;
+}
+
+/* NAV */
+
+nav, .nav-links {
+    display: flex;
+}
+
+nav {
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px; /* Adjust padding/margin for layout */
+    height: 10vh;
+}
+
+.nav-links {
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white;
+
+}
+
+a:hover {
+    color: gray;
+    text-decoration: underline;
+    text-decoration-color: red;
+
+}
+
+.syne-logo:hover{
+    cursor: default;
+}
+
+/* BURGER NAV */
+
+#burger-nav {
+    display: none;
+}
+
+.burger-menu {
+    position: relative;
+    display: inline-block; 
+}
+
+.burger-menu-icon {
+    display: flex;
+    justify-content: space-between;
+    height: 24px;
+    width: 50px;
+    cursor: pointer;
+    align-items: center;
+}
+
+.burger-menu-icon i {
+    margin-left: 10px;
+    transition: all 0.3ms ease-in-out;
+}
+
+
+.burger-menu-links {
+    display: none; /* Hidden by default */
+    position: absolute; /* Positioned relative to the parent */
+    top: 100%; /* Immediately below the trigger */
+    left: auto;
+    right: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: max-content;
+    text-align: right; /* Center-aligns all items */
+    width: max-content; /* Or adjust to a specific width as necessary */
+}
+
+.burger-menu-links li {
+    list-style: none;
+    padding: 5px 20px;
+    width: 100%;
+}
+
+.burger-menu-links.open {
+    max-height: 300px;
+    visibility: visible; /* Make visible */
+    opacity: 1;
+    display: block;
+}
+
+.burger-menu-icon.open i {
+    transform: rotate(180deg);
+}
+
+/* SECTION */
+
+section {
+    padding-top: 4vh;
+    height: 96;
+    margin: 0 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+
+.section-container {
+    display: flex;
+}
+
+.nome-container p {
+    font-size: 2rem;
+}
+
+.nome-container h1 {
+    font-family: "Yeseva One", serif;
+    font-size: 5rem;
+    color: #ff0800;
+}
+
+#profile {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+    height: 80vh;
+    align-items: center;
+    margin: 20px;
+
+}
+
+.section-pic-container {
+    display: flex;
+    height: 350px;
+    width: 350px;
+    margin: auto 0;
+}
+
+.profile-pic-style {
+    border: 1px solid #ff0800; /* Red border with 5px width */
+    border-radius: 20px; /* Adjust this value to change the roundness */
+    max-width: 100%; /* Ensures the image is responsive */
+    height: auto;
+}
+
+.section-text {
+    align-self: center;
+    text-align: center;
+    min-width: 250px;
+    max-width: 600px;
+    line-height: 1.5;
+    padding: 10px;
+}
+
+.section-text-p1 {
+    text-align: center;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 3rem;
+    font-family: "Syne", sans-serif;
+    text-align: center;
+}
+
+#socials-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+.icon {
+    cursor: pointer;
+    height: 2rem;
+    font-size: 32px;
+}
+
+/* Custom label styling */
+.custom-label {
+    display: inline-flex; /* Align icon and text horizontally */
+    align-items: center;
+    border: 2px solid #ff0800; /* Adjust border style and color as desired */
+    border-radius: 50px; /* Makes it round */
+    padding: 3px 8px; /* Adjust padding for desired size */
+    gap: 8px; /* Space between the icon and text */
+    color: black;
+    margin: 3px;
+    top: -.1em;
+    padding: 0em 1ch; /* Adjust font to match the design */
+}
+
+.custom-label i {
+    font-size: 16px; /* Adjust icon size to your preference */
+}
+
+#contact {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 70vh;
+  }
+  
+  .contact-info-upper-container {
+    display: flex;
+    justify-content: center;
+    border-radius: 2rem;
+    border:2px solid #ff0800; 
+    border-color: #ff0800;
+    margin: 2rem auto;
+    padding: 0.5rem;
+  }
+  
+  .contact-info-container {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1rem;
+    vertical-align: baseline;
+    align-items: baseline
+  }
+  
+  .contact-info-container p {
+    font-size: larger;
+  }
+
+  .contact-info-container i {
+    font-size: 24px; /* Adjust icon size */
+    display: inline-block;
+    vertical-align: middle; 
+    /* Align the icon vertically with the text */
+}
+  
+  .contact-icon {
+    cursor: default;
+  }
+  
+  .email-icon {
+    height: 2.5rem;
+  }
+
+  .btn {
+    transition: all 300ms ease;
+    width: 8rem;
+    border-radius: 2rem;
+    font-size: 1.75rem;
+    font-family: "Josefin Sans", sans-serif;
+    margin: 3px;
+    padding: 0.1em 1ch; /* Reduce padding to slim the height */
+    text-align: center;
+    line-height: 1.5em;  /* Adjusts the vertical alignment */
+}
+
+.btn-color-2 {
+    border: 2px solid #ff0800;
+    color: #000; /* Sets a default text color */
+    background: none;
+}
+
+.btn-color-2:hover {
+    cursor: pointer;
+    border: 2px solid #FFFFFF; /* White border on hover */
+    background: rgb(255, 35, 0); /* Background color change */
+    color: white; /* Text color change */
+}
+
+.btn-container {
+    gap: 1rem;
+}
+
+footer {
+    height: 26vh;
+    margin: 0 1rem;
+  }
+
+ footer nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  footer p {
+    text-align: center;
+  }
+
+  /* General Container */
+#projetos {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between the two cards */
+    margin: 40px auto;
+    max-width: 1000px;
+    flex-wrap: wrap;
+}
+
+/* Individual Card */
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px; /* Adjust width as needed */
+    background-color: #ffecdd;
+    border: 2px solid #e07467;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Content (list within each card) */
+.content h2 {
+    border-bottom: 2px solid #ff0000;
+    color: #ff0000;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+#projetos ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#projetos li {
+    margin-bottom: 10px;
+}
+
+#projetos a {
+    text-decoration: none;
+    color: #ec2028;
+    font-size: 20px;
+}
+
+#projetos a:hover {
+    text-decoration: underline;
+    color: #DF99A5;
+}
+
+.educ-container {
+    background-color: white;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1.educ-container {
+    font-size: 24px;
+    color: black;
+    text-align: center;
+}
+
+h2.educ-container {
+    font-size: 18px;
+    color: black;
+    margin-top: 20px;
+}
+
+p.educ-container {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+}
